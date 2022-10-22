@@ -61,7 +61,7 @@
     </div>
   </section>
 
-  <section id="reg" class="block-list">
+  <section id="reg" class="block-registr">
     <div class="container-sm">
       <div class="block-menu-bg">
         <h1 class="block-list-h1">Список зарегистрированных пользователей</h1>
