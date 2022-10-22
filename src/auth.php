@@ -8,7 +8,7 @@ $pass=md5($pass."fghsgfsuh4321");
 
 $mysql=new mysqli('localhost','root','root','webpractik');
  
-$result= @mysql->query("SELECT * FROM 'users' WHERE 'login' = '$login' AND 'pass' = '$pass'");
+$result= @mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
 $user=$result->fetch_assoc();
 if(count($user) == 0){
     echo "Такой пользователь не найден"
