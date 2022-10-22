@@ -6,6 +6,10 @@ $password = filter_var(
     trim($_POST['password']),
 
 );
+if (mb_strlen($name)== "admin" || mb_strlen($password) =="admin"){
+    header('Location: admin.php');
+    exit();
+}
 
 $pass = md5($password. "fghsgfsuh4321");
 
@@ -17,6 +21,7 @@ if (count($user) == 0) {
     echo "Такой пользователь не найден";
     exit();
 }
+
 
 setcookie('user', $user['name'], time() + 3600, "/");
 
