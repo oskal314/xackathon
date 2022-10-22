@@ -12,22 +12,32 @@
 </head>
 
 <body>
-  <div class="container mt-4">
-    <h1>Регистрация</h1>
-    <form action="" method="post">
-      <input type="text" class="form-control" name="name" id="name" placeholder="ФИО">
-      <input type="text" class="form-control" name="login" id="login" placeholder="Ввидите логин">
-      <input type="password" class="form-control" name="password" id="password" placeholder="Ввидите пароль">
-      <input id="email" type="text" name="email" class="form-control">
-      <!-- <select name="age" class="select">
-        <option value="от 18 до 25" selected>Молодой</option>
-        <option value="от25 до 45">Старый</option>
-        <option value="от 45">Олд</option>
-      </select> -->
-      <button type="submit" class="btn btn-success">Зарегистрировать</button>
-    </form>
-  </div>
-
+  <section class="block-f">
+    <div class="block-form">
+      <div class="container">
+        <div class="block-form-all">
+          <h1 class="registr-h1">Регистрация</h1>
+          <form action="" method="post">
+            <input type="text" class="form-control" name="name" id="name" placeholder="ФИО">
+            <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Введите пароль">
+            <select name="role" id="role" class="form-control">
+              <option value="">Выбор роли </option>
+              <option value="student">Студент</option>
+              <option value="teacher">Преподователь</option>
+              <option value="employee">Сотрудник</option>
+            </select>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-light form-control" formaction="authorization.html">Зарегистрироваться</button>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="authorization.html" class="form-control-a">Вернуться на главную</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
