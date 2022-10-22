@@ -17,21 +17,21 @@
       <div class="container">
         <div class="block-form-all">
           <h1 class="registr-h1">Регистрация</h1>
-          <form action="" method="post">
+          <form action="../check.php" method="post">
             <input type="text" class="form-control" name="name" id="name" placeholder="ФИО">
             <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин">
             <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль">
             <select name="role" id="role" class="form-control">
               <option value="">Выбор роли </option>
-              <option value="student">Студент</option>
-              <option value="teacher">Преподователь</option>
-              <option value="employee">Сотрудник</option>
+              <option value="Студент">Студент</option>
+              <option value="Преподователь">Преподователь</option>
+              <option value="Сотрудник">Сотрудник</option>
             </select>
             <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-light form-control" formaction="authorization.html">Зарегистрироваться</button>
+              <button type="submit" class="btn btn-light btn-success form-control">Зарегистрироваться</button>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="authorization.html" class="form-control-a">Вернуться на главную</a>
+              <a href="../index.html" class="form-control-a">Вернуться на главную</a>
             </div>
           </form>
         </div>
@@ -41,7 +41,7 @@
 
 
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
