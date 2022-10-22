@@ -15,6 +15,7 @@
   <section class="block-menu">
     <div class="container-sm">
       <div class="block-menu-bg">
+        <a href="../index.html" class="block-menu-glav">На главную</a>
         <h1 class="block-menu-h1">администратор</h1>
         <div class="block-menu-flex-fb">
           <div class="block-menu-flex-fb-width">
@@ -29,13 +30,60 @@
         <div class="block-menu-flex-sb">
           <div class="block-menu-flex-sb-width">
             <img class="block-menu-img" src="../icons/admin/Subtract2.png" alt="Зарегистрированные пользователи">
-            <a href="#" class="block-menu-flex-p">Зарегистрированные <br>
+            <a href="#reg" class="block-menu-flex-p">Зарегистрированные <br>
               пользователи</a>
           </div>
           <div class="block-menu-flex-sb-width">
             <img class="block-menu-img" src="../icons/admin/Subtract4.png" alt="обращение к ректору">
             <a href="#" class="block-menu-flex-p">Обращение к ректору</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-list">
+    <div class="container-sm">
+      <div class="block-menu-bg">
+        <h1 class="block-list-h1">Расписание занятий</h1>
+        <div class="block-list-fl">
+          <div class="block-list-fio">
+            <h1 class="form-control-authorization">Расписание занятий</h1>
+            <form action="../index.html" method="post" enctype="multipart/form-data">
+              <input type="file" name="name_file">
+              <input type="submit" value="Отправить файл">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reg" class="block-list">
+    <div class="container-sm">
+      <div class="block-menu-bg">
+        <h1 class="block-list-h1">Список зарегистрированных пользователей</h1>
+        <div class="block-list-fl">
+          <div class="block-list-fio">
+            <?php
+            $mysql = new mysqli('localhost', 'root', '', 'webpractik');
+            $result = $mysql->query("SELECT * FROM `users`");
+            while ($users = mysqli_fetch_assoc($result)) {
+            ?>
+              <div class="block-list-fio"><?php
+                                          echo $users['name'];
+                                          echo "___";
+                                          echo $users['id_role']; ?>
+              </div>
+
+            <?php
+            }
+            ?>
+
+          </div>
+
         </div>
       </div>
     </div>
