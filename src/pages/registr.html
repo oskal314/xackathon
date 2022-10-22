@@ -18,10 +18,10 @@
         <div class="block-form-all">
           <h1 class="registr-h1">Регистрация</h1>
           <form action="../check.php" method="post">
-            <input type="text" class="form-control" name="name" id="name" placeholder="ФИО">
-            <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин">
-            <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль">
-            <select name="role" id="role" class="form-control">
+            <input type="text" class="form-control form-control-registr" name="name" id="name" placeholder="ФИО">
+            <input type="text" class="form-control form-control-registr" name="login" id="login" placeholder="Введите логин">
+            <input type="password" class="form-control form-control-registr" name="pass" id="pass" placeholder="Введите пароль">
+            <select name="role" id="role" class="form-control form-control-registr">
               <option value="">Выбор роли </option>
               <option value="Студент">Студент</option>
               <option value="Преподователь">Преподователь</option>
@@ -31,7 +31,7 @@
               <button type="submit" class="btn btn-light btn-success form-control">Зарегистрироваться</button>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="../index.html" class="form-control-a">Вернуться на главную</a>
+              <a href="../index.html" class="form-control-registr-a">Вернуться на главную</a>
             </div>
           </form>
         </div>
