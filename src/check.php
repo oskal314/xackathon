@@ -1,30 +1,29 @@
 <?php
 
 $name = filter_var(
-    trim($_POST['name']),
-   
+    trim($_POST['name'])
 );
 
 
 $login = filter_var(
-    trim($_POST['login']),
-    
+    trim($_POST['login'])
+
 );
 $password = filter_var(
-    trim($_POST['password']),
-    
+    trim($_POST['password'])
+
 );
 $role = filter_var(
-    trim($_POST['role']),
- 
+    trim($_POST['role'])
+
 );
 
 $email = filter_var(
-    trim($_POST['email']),
-     
+    trim($_POST['email'])
+
 );
 
-  
+
 if (mb_strlen($login) < 5 || mb_strlen($login) > 90) {
     echo "Недопустимая длина логина";
     exit();
@@ -44,14 +43,14 @@ $queryRole = sprintf("SELECT id_role FROM `roles` WHERE role='%s'", $role);
 $resultRole = mysqli_query($mysql, $queryRole);
 $id_role = null;
 
-while($rolerows = mysqli_fetch_row($resultRole)) {
+while ($rolerows = mysqli_fetch_row($resultRole)) {
     $id_role =  $rolerows[0];
-  }
+}
 
 if (!$resultRole) {
     echo "роль не найдена";
     exit();
-}  
+}
 
 // создание пользователя
 $mysql->query("INSERT INTO `users`(`name`,`id_role`,`email`)
@@ -61,12 +60,12 @@ $queryUser = sprintf("SELECT id FROM `users` WHERE email='%s'", $email);
 $resultUser = mysqli_query($mysql, $queryUser);
 $id_user = null;
 
-while($row = mysqli_fetch_assoc($resultUser)) {
+while ($row = mysqli_fetch_assoc($resultUser)) {
     $id_user = $row['id'];
 }
 
 
-    $mysql->query("INSERT INTO `authorizate`(`login`,`password`,`id_user`)
+$mysql->query("INSERT INTO `authorizate`(`login`,`password`,`id_user`)
     VALUES('$login','$password', '$id_user')");
 
 
