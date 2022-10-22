@@ -1,18 +1,17 @@
 <?php
 $login = filter_var(
     trim($_POST['login']),
-    FILTER_SANITIZE_STRING
 );
-$pass = filter_var(
-    trim($_POST['pass']),
-    FILTER_SANITIZE_STRING
+$password = filter_var(
+    trim($_POST['password']),
+
 );
 
-$pass = md5($pass . "fghsgfsuh4321");
+$pass = md5($password. "fghsgfsuh4321");
 
 $mysql = new mysqli('localhost', 'root', '', 'webpractik');
 
-$result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
+$result = $mysql->query("SELECT * FROM `authorizate` WHERE `login` = '$login' AND `password` = '$password'");
 $user = $result->fetch_assoc();
 if (count($user) == 0) {
     echo "Такой пользователь не найден";
