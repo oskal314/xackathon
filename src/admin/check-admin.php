@@ -73,4 +73,4 @@ $mysql->query("INSERT INTO `authorizate`(`login`,`password`,`id_user`)
 
 $mysql->close();
 
-header('Location: index.html');
+header('Location: admin.html');

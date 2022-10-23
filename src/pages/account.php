@@ -29,7 +29,9 @@
                 <a class="nav-item-user nav-item nav-link" href="account.php">Личный кабинет</a>
               </div>
             </div>
+
           </div>
+
         </nav>
       </div>
       <div class="block-menu-vuz"></div>
